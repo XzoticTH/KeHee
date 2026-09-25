@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="th">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>คีไทประดิษฐ์.Com</title><link rel="stylesheet" href="options.css"></head>
+<body>
+<div id="loginView" class="login-view">
+  <div class="login-card">
+    <div class="login-logo">ค</div>
+    <div class="eyebrow">คีไทประดิษฐ์.Com</div>
+    <h1>เข้าสู่ระบบ</h1>
+    <p class="login-sub">เข้าสู่ระบบภายในเครื่องเพื่อใช้งาน Extension</p>
+    <form id="loginForm">
+      <label>ไอดี<input id="loginId" type="text" autocomplete="username" placeholder="กรอกไอดี" required></label>
+      <label>รหัสผ่าน<input id="loginPassword" type="password" autocomplete="current-password" placeholder="กรอกรหัสผ่าน" required></label>
+      <p class="small">ระบบเชื่อมต่อเซิร์ฟเวอร์สมาชิกที่กำหนดไว้โดยอัตโนมัติ และใช้ HTTPS</p>
+      <button class="login-btn" type="submit">เข้าสู่ระบบ</button>
+      <div id="loginStatus" class="login-status" role="alert" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+
+<div id="appView" class="app-view hidden">
+<header class="top"><div class="brand-mark">ค</div><div class="brand"><h1>คีไทประดิษฐ์.Com</h1><p>LINE OA Quick Reply · ระบบสมาชิก</p></div><span class="version">V21</span><span id="userLabel" class="version"></span><button id="logout" class="logout" type="button">ออกจากระบบ</button></header>
+<main>
+<section id="adminPanel" class="calculator hidden">
+  <div class="section-head"><h2>จัดการสมาชิก</h2><span class="count">Admingod</span></div>
+  <form id="memberForm" class="member-form">
+    <label>ไอดีสมาชิก<input id="newMemberId" required minlength="3" maxlength="40" placeholder="เช่น Staff01"></label>
+    <label>รหัสผ่านเริ่มต้น<input id="newMemberPassword" required minlength="8" type="password" placeholder="อย่างน้อย 8 ตัวอักษร"></label>
+    <label>วันหมดอายุ (ไม่กรอก = ไม่หมดอายุ)<input id="newMemberExpiry" type="date"></label>
+    <button class="primary" type="submit">สร้างบัญชีสมาชิก</button>
+  </form>
+  <div id="memberStatus" role="status"></div>
+  <div id="membersList"></div>
+</section>
+<section class="intro"><div class="eyebrow">LINE OA Quick Reply</div><h2>คลิกปุ่มเพื่อใส่ข้อความในแชต</h2><p>เปิดห้องแชต LINE OA ไว้ก็พอ ไม่ต้องคลิกช่องพิมพ์ก่อน ระบบจะใส่ข้อความให้พร้อมตรวจสอบก่อนกดส่ง</p><div class="notice"><strong>สำคัญ:</strong> ระบบจะไม่กดปุ่มส่งให้เอง คุณยังเป็นคนกด “ส่ง” ของ LINE OA</div></section>
+<section class="calculator"><div class="section-head"><h2>คำนวณ + / - อัตโนมัติ</h2><label class="switch"><input id="calcToggle" type="checkbox"><span class="slider"></span></label></div><p class="small">เมื่อเปิดไว้ พิมพ์ เช่น <b>258+11=</b> ในช่องแชต ระบบจะเติม <b>*269*</b> ให้ดูทันที โดยยังไม่ส่งข้อความ</p><input id="calcExample" type="text" placeholder="ลองพิมพ์ตัวอย่าง เช่น 258+11=" value="258+11="><div class="calc-preview"><strong>ตัวอย่าง:</strong> <span id="calcPreview">258+11= *269*</span></div></section>
+<section class="replies"><div class="section-head"><h2>ข้อความของคุณ</h2><span class="count">4 ปุ่ม</span></div><div id="rows"></div></section>
+<div class="actions"><button id="save" class="primary">บันทึกข้อความ</button><button id="clear" class="secondary">ล้างทั้งหมด</button></div>
+<div id="status" role="status" aria-live="polite"></div>
+<section class="howto"><h3>วิธีใช้งาน</h3><ol><li>พิมพ์ข้อความที่ต้องการในช่องของปุ่ม 1–4 แล้วกด <b>บันทึกข้อความ</b></li><li>เปิดห้องแชต LINE OA โดยไม่ต้องคลิกช่องพิมพ์</li><li>คลิก <b>ใส่ข้อความในแชต</b></li><li>ตรวจสอบข้อความในช่องพิมพ์</li><li>กดปุ่ม <b>ส่ง</b> ของ LINE OA ด้วยตัวเอง</li></ol><p class="small">เมื่อเปิดคำนวณ ระบบจะเติมผลลัพธ์ในช่องพิมพ์ LINE OA ให้ดูและตรวจสอบก่อนส่ง</p></section>
+</main></div>
+<script src="options.js"></script></body></html>
