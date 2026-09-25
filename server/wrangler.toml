@@ -1,0 +1,11 @@
+name = "kheitai-membership-api"
+main = "cloudflare-worker.js"
+compatibility_date = "2026-09-25"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "kheitai-membership"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+
+[vars]
+CORS_ORIGIN = "*"

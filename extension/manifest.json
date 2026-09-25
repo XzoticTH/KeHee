@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "คีไทประดิษฐ์.Com — LINE OA Quick Reply",
+  "version": "21.0.0",
+  "description": "LINE OA Quick Reply พร้อมระบบสมาชิกออนไลน์และวันหมดอายุ",
+  "permissions": ["storage", "sidePanel", "tabs", "scripting", "debugger", "permissions"],
+  "host_permissions": ["https://chat.line.biz/*", "https://manager.line.biz/*"],
+  "optional_host_permissions": ["https://*/*", "http://localhost/*", "http://127.0.0.1/*"],
+  "background": {"service_worker": "background.js"},
+  "side_panel": {"default_path": "options.html"},
+  "action": {"default_title": "คีไทประดิษฐ์.Com"},
+  "content_scripts": [{
+    "matches": ["https://chat.line.biz/*", "https://manager.line.biz/*"],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "kheitai-membership-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "KheitaiPradit.Com membership API for LINE OA Quick Reply",
+  "main": "server.js",
+  "scripts": {"start": "node server.js"},
+  "engines": {"node": ">=18"},
+  "dependencies": {"better-sqlite3": "^11.10.0"}
+}
